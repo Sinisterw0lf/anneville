@@ -20,10 +20,10 @@
       </div>
       {{-- login/dashboard/logout --}}
     </div>
-    <div class="py-10 mobile:py-2">
+    <div class="py-10 mobile:py-2   ">
       {{-- dropdown --}}
       <button data-collapse-toggle="mobile-menu-2" type="button"
-        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg tablet:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg desktop:hidden laptop:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="mobile-menu-2" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -37,44 +37,45 @@
             clip-rule="evenodd"></path>
         </svg>
       </button>
-      <div class="hidden bg-[#D82626] items-center justify-center p-5 rounded tablet:flex tablet:w-auto tablet:order-1 "
+
+      <div class="hidden bg-[#D82626] items-center justify-center p-5 rounded desktop:flex desktop:w-auto desktop:order-1 "
         id="mobile-menu-2">
-        <ul class="flex flex-col mt-4 font-medium tablet:flex-row tablet:space-x-8  tablet:mt-0">
-          <li
+        <ul class="flex flex-col mt-4 font-medium desktop:flex-row desktop:space-x-8 desktop:mt-0">
+          <li 
             @if (Request::is('/')) class="text-black"
             @else
             class="text-[#EFEFEF]" @endif>
             <a href="/"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 ">Accueil</a>
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 ">Accueil</a>
           </li>
           <li
             @if (Request::is('/actualités')) class="text-black"
             @else
             class="text-[#EFEFEF]" @endif>
             <a href="/actualités"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 {{ Request::is('/actualités') ? 'text-black' : 'text-[#EFEFEF]' }}">Actualités</a>
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 {{ Request::is('/actualités') ? 'text-black' : 'text-[#EFEFEF]' }}">Actualités</a>
           </li>
           <li>
             <a href="/agenda"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 {{ Request::is('/agenda') ? 'text-black' : 'text-[#EFEFEF]' }}"
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 {{ Request::is('/agenda') ? 'text-black' : 'text-[#EFEFEF]' }}"
               aria-current="page">Agenda</a>
           </li>
           <li>
             <a href="/cadredevie"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 {{ Request::is('/cadredevie') ? 'text-black' : 'text-[#EFEFEF]' }}">Cadre
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 {{ Request::is('/cadredevie') ? 'text-black' : 'text-[#EFEFEF]' }}">Cadre
               de vie et démarches</a>
           </li>
           <li>
             <a href="/mairie"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 {{ Request::is('/mairie') ? 'text-black' : 'text-[#EFEFEF]' }}">La
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 {{ Request::is('/mairie') ? 'text-black' : 'text-[#EFEFEF]' }}">La
               mairie</a>
           </li>
           <li>
             <a href="/liens"
-              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 tablet:hover:bg-transparent tablet:border-0 tablet:hover:text-gray-300 tablet:p-0 {{ Request::is('/liens') ? 'text-black' : 'text-[#EFEFEF]' }}">Liens</a>
+              class="block py-2 pr-4 pl-3  border-b border-gray-100  hover:bg-gray-300 desktop:hover:bg-transparent desktop:border-0 desktop:hover:text-gray-300 desktop:p-0 {{ Request::is('/liens') ? 'text-black' : 'text-[#EFEFEF]' }}">Liens</a>
           </li>
         </ul>
-        <div class="tablet:py-5">
+        <div class="desktop:py-5">
           {{-- <form class="flex items-center">
             <label for="simple-search" class="sr-only">Recherche</label>
             <div class="relative w-full">

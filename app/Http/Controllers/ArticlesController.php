@@ -22,6 +22,7 @@ class ArticlesController extends Controller
         return view('pages.index', compact('articles', 'actualites', 'agendas'));
     }
 
+    // this part represents each type of articles that have been published in their respective links
     public function actualites(){
         $actualites = Articles::where('type', 'Actualités')->where('is_published', 1)->orderBy("created_at", "DESC")->paginate(6);
         return view('actualités', compact('actualites'));

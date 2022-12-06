@@ -93,12 +93,12 @@ class UserController extends Controller
             'password' => 'required|string|min:8|',
             'is_admin' => 'required|'
         ]);
-
+        // allow to change users role 
         if($user){
             $user->is_admin = $request->is_admin;
             $user->update();
         }
-
+        // allow to update password and hashed password if not the case
         if (empty($request['password'])) {
             $user->update($request->except('password'));
         } else {

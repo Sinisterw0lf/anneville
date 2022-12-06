@@ -18,14 +18,14 @@ module.exports = {
             },
         },
         screens: {
-            mobile: {"max": "320px"},
+            mobile: { max: "320px" },
             // => @media (max-width: 320px) { ... }
-            tablet: "640px",
-            // => @media (min-width: 640px) { ... }
-            laptop: "1024px",
-            // => @media (min-width: 1024px) { ... }
-            desktop: "1280px",
-            // => @media (min-width: 1280px) { ... }
+            tablet: { min: "321px", max: "640px" },
+            // => @media (min-width: 321px , max-width: 640px) { ... }
+            laptop: { min: "641px", max: "1024px" },
+            // => @media (min-width: 641px , max-width: 1024px) { ... }
+            desktop: { min: "1025px" },
+            // => @media (min-width: 1025px) { ... }
         },
     },
 
