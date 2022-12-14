@@ -1,6 +1,6 @@
 <x-layouts.main-layout title="Modification article">
   <div class="container p-10">
-    <h1 class="font-bold text-3xl ">Modifier article :</h1>
+    <h1 class="font-bold text-3xl ">Modifier un utilisateur :</h1>
     <form method="POST" action="{{ route('users.update', $user->id) }}" enctype="multipart/form-data">
       @csrf
       @method('PUT')
