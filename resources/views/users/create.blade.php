@@ -1,5 +1,6 @@
 <x-layouts.main-layout title="Création de compte utilisateur">
-  <div>
+  <div class="container p-10">
+    <h1 class="font-bold text-3xl">Créer un utilisateur :</h1>
     <form action="{{ route('users.store') }}" method="post">
       @csrf
       <div class="container">

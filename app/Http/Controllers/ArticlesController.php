@@ -16,14 +16,15 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Articles::where('is_published',1)->orderBy("created_at", "DESC")->paginate(3);
-        $actualites = Articles::where('type','Actualités')->where('is_published', 1)->orderBy("created_at", "DESC")->paginate(3);
+        $articles = Articles::where('is_published', 1)->orderBy("created_at", "DESC")->paginate(3);
+        $actualites = Articles::where('type', 'Actualités')->where('is_published', 1)->orderBy("created_at", "DESC")->paginate(3);
         $agendas = Articles::where('type', 'Agenda')->where('is_published', 1)->orderBy("created_at", "DESC")->paginate(3);
         return view('pages.index', compact('articles', 'actualites', 'agendas'));
     }
 
     // this part represents each type of articles that have been published in their respective links
-    public function actualites(){
+    public function actualites()
+    {
         $actualites = Articles::where('type', 'Actualités')->where('is_published', 1)->orderBy("created_at", "DESC")->paginate(6);
         return view('actualités', compact('actualites'));
     }
@@ -52,7 +53,7 @@ class ArticlesController extends Controller
         return view('liens', compact('liens'));
     }
 
-   
+
 
     /**
      * Show the form for creating a new resource.
@@ -87,7 +88,7 @@ class ArticlesController extends Controller
             'description' => $request->description,
             'url_img' => $validateImg,
             'description2' => $request->description2,
-            'type'=> $request->type,
+            'type' => $request->type,
             'created_at' => now(),
         ]);
 

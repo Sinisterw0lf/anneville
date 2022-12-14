@@ -8,6 +8,7 @@
           <h1 class="font-bold text-3xl tablet:text-2xl mobile:text-lg">Anneville Ambourville</h1>
           <h2 class="mobile:text-sm">Un village où il fait bon vivre</h2>
         </div>
+        {{-- login/dashboard/logout --}}
         <div class="space-x-5 mobile:space-x-0 mobile:pl-6 flex mobile:block">
           @guest
             <a class="mobile:text-sm" href="/login">Connexion</a>
@@ -18,7 +19,6 @@
           @endauth
         </div>
       </div>
-      {{-- login/dashboard/logout --}}
     </div>
     <div class="py-10 mobile:py-2   ">
       {{-- dropdown --}}
@@ -37,7 +37,7 @@
             clip-rule="evenodd"></path>
         </svg>
       </button>
-
+      {{-- navbar --}}
       <div class="hidden bg-[#D82626] items-center justify-center p-5 rounded desktop:flex desktop:w-auto desktop:order-1 "
         id="mobile-menu-2">
         <ul class="flex flex-col mt-4 font-medium desktop:flex-row desktop:space-x-8 desktop:mt-0">

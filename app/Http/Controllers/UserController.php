@@ -43,7 +43,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:8|',
         ]);
-
+        // allow to hash the password when store
         $request['password'] = Hash::make($request['password']);
 
         User::create([
